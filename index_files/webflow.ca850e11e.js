@@ -1393,6 +1393,14 @@ Webflow.define('brand', module.exports = function ($) {
     $(brandElement).attr('style', fullScreen ? 'display: none !important;' : '');
   }
 
+  function createBadge() {
+    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', '');
+
+    var $logoText = $('<img>').attr('alt', '');
+    $brand.append($logoArt, $logoText);
+    return $brand[0];
+  }
+
   function ensureBrand() {
     var found = $body.children(namespace);
     var match = found.length && found.get(0) === brandElement;
