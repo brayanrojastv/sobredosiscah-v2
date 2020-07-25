@@ -1393,17 +1393,6 @@ Webflow.define('brand', module.exports = function ($) {
     $(brandElement).attr('style', fullScreen ? 'display: none !important;' : '');
   }
 
-  function createBadge() {
-    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'http://brayanrojastv.us.to');
-    var $logoArt = $('<img>').attr('src', '').attr('alt', '').css({
-      marginRight: '8px',
-      width: '16px'
-    });
-    var $logoText = $('<img>').attr('src', '').attr('alt', 'Made in Colombia');
-    $brand.append($logoArt, $logoText);
-    return $brand[0];
-  }
-
   function ensureBrand() {
     var found = $body.children(namespace);
     var match = found.length && found.get(0) === brandElement;
